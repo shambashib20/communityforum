@@ -1,4 +1,4 @@
-{% extends 'main.html' %} 
+{% extends 'main.html' %}
 {% block content %}
 
 <style>
@@ -6,7 +6,6 @@
         display: grid;
         grid-template-columns: 3fr 1fr;
     }
-
 </style>
 
 
@@ -44,6 +43,12 @@
     <div>
         <h3>Participants</h3>
         <hr>
+
+        {% for user in participants %}
+           <div>
+                <p>@{{user.username}}</p>
+           </div>
+        {% endfor %}
     </div>
 
 
